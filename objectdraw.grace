@@ -944,7 +944,8 @@ class application.title(initialTitle : String)
 
   method startApplication -> Done {
     if (!isOpened) then {
-      theWindow := dom.window.open("", "", "width={theWidth},height={theHeight}")
+      theWindow := dom.window.open("", "", 
+        "width={theWidth},height={theHeight},location=no,menubar=no,resizable=no,status=no,toolbar=no")
       theWindow.document.title := theTitle
       theWindow.document.body.appendChild(element)
 
